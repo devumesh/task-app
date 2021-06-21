@@ -9,3 +9,6 @@ body
 {
     background: #ebf2ff;
 }
+.form-control:focus {
+    box-shadow: none;
+  }
