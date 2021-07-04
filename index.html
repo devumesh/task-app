@@ -21,7 +21,7 @@
     <!-- User own css -->
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body>
+<body onload="loadInitialTaskCards()">
     <!-- Modal -->
     <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -50,11 +50,12 @@
             </div>
             <div class="modal-footer justify-content-start">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onClick="saveChanges()">Save changes</button>
+                <button type="button" class="btn btn-primary" onClick="saveChanges()" data-bs-dismiss="modal">Save changes</button>
             </div>
           </div>
         </div>
     </div>
+    
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container-fluid">
@@ -97,31 +98,6 @@
     <!-- Card area -->
     <div class="container">
         <div class="row card__container">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-end gap-1">
-                        <button class="btn btn-outline-success btn-sm">
-                            <i class="far fa-edit"></i>
-                        </button>
-                        <button class="btn btn-outline-danger btn-sm">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <img src="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" alt="" class="card-img-top mb-2">
-                        <h4 class="card-title">Task title</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, tempore?</p>
-                        <h5>
-                            <span class="badge bg-success">Tags here</span>
-                        </h5>
-                    </div>
-                    <div class="card-footer d-flex justify-content-end">
-                        <button class="btn btn-primary">
-                            Open task
-                        </button>
-                    </div>
-                </div>
-            </div>
             
         </div>
     </div>
